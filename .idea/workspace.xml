@@ -15,16 +15,40 @@
     <leaf>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../scan_score/manage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../scan_score/scan_score/apps.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../scan_score/scan_score/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../scan_score/templates/css/style.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../scan_score/templates/login.html">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../scan_score/requirements.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="6" selection-start-column="6" selection-end-column="6" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/../scan_score/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -34,6 +58,7 @@
       <list>
         <option value="$PROJECT_DIR$/../scan_score/.gitignore" />
         <option value="$PROJECT_DIR$/../scan_score/requirements.txt" />
+        <option value="$PROJECT_DIR$/../scan_score/manage.py" />
       </list>
     </option>
   </component>
@@ -55,6 +80,16 @@
               <item name="scan_score" type="b2602c69:ProjectViewProjectNode" />
               <item name="scan_score" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="scan_score" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scan_score" type="462c0819:PsiDirectoryNode" />
+              <item name="scan_score" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scan_score" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scan_score" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -68,6 +103,14 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../scan_score/mysite" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../scan_score/templates" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -313,16 +356,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1553150315065</updated>
-      <workItem from="1553150322308" duration="1655000" />
+      <workItem from="1553150322308" duration="2500000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1655000" />
+    <option name="totallyTimeSpent" value="2500000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="61" y="25" width="1859" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.3541092" />
@@ -364,15 +406,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../scan_score/manage.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../scan_score/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="6" selection-start-column="6" selection-end-column="6" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scan_score/templates/css/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scan_score/mysite/manage.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scan_score/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scan_score/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scan_score/scan_score/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scan_score/scan_score/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scan_score/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

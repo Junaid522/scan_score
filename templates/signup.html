@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+        <h2>Sign up</h2>
+
+    <div class="container-fluid container-fill-height">
+                <div class="container-content-middle">
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p style="color: red">{{ error_msg }}</p>
+            {% for field in form %}
+                <p>
+                    {{ field.label_tag }}<br>
+                    {{ field }}
+                    {% for error in field.errors %}
+                        <p style="color: red">{{ error }}</p>
+                    {% endfor %}
+                </p>
+            {% endfor %}
+            <p>
+                <small style="color: grey">Password must be 8 characters long</small>
+            </p>
+            <button class="btn btn-primary" type="submit">Sign up</button>
+            <br><br>
+            <a href="{% url 'login' %}" class="text-muted">Login</a>
+
+        </form>
+    </div>
+    </div>
+
+{% endblock %}

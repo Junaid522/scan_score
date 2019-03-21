@@ -1,32 +1,11 @@
-<!Doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Score Scan</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="header">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6">
-              <div class="logo-holder">
-                <img src="img/logo.png" alt="Main logo" />
-              </div>  
-            </div>
-            <div class="col-xs-12 col-sm-6">
-              <div class="header-title">
-                <h1>ACT Score Report</h1>
-              </div>  
-            </div>
-          </div>
-        </div>
-      </div>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<body>
+
+<div class="header-title"  style="margin-right: 50%">
+    <h1>ACT Score Report</h1>
+</div>
       <div class="container">
         <div class="row">
           <div class="col-xs-12 col-sm-8">
@@ -140,8 +119,8 @@
         </div>
       </div>
     </div>
-    <script src="js/jquery-3.2.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../static/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="../static/js/popper.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
   </body>
-</html>
+{% endblock %}

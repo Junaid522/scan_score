@@ -16,6 +16,10 @@
     <content url="file://$MODULE_DIR$/../scan_score" />
     <orderEntry type="jdk" jdkName="Python 3.6 (ttt)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="solid" level="application" />
+    <orderEntry type="library" name="fontawesome" level="application" />
+    <orderEntry type="library" name="jquery-3.3.1.slim" level="application" />
+    <orderEntry type="library" name="popper" level="application" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />

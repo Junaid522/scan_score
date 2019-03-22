@@ -43,26 +43,22 @@
             <div class="main-logo">
               <img src="../static/img/logo.png" alt="logo" />
             </div>
-            <form>
-              <div class="form-group">
-                <img src="../static/img/email-icon.png" id="input_img">
-                <input type="text" class="custom-form" name="" placeholder="Email Address" />  
+            <div class="file-upload">
+              <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
+
+              <div class="image-upload-wrap">
+                <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+                <div class="drag-text">
+                  <h3>Drag and drop a file or select add Image</h3>
+                </div>
               </div>
-              <div class="form-group">
-                <img src="../static/img/pw-icon.png" id="input_img-2">
-                <input type="password" class="custom-form" name="" placeholder="Password" />  
+              <div class="file-upload-content">
+                <img class="file-upload-image" src="#" alt="your image" />
+                <div class="image-title-wrap">
+                  <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
+                </div>
               </div>
-              <div class="checkbox-grup">
-                <label class="checkbox-container"> Keep me logged in. 
-                  <input type="checkbox">
-                  <span class="checkmark"></span>
-                </label>  
-              </div>
-              <div class="buttons text-center">
-                <a href="#" class="btn btn-md btn-custom">Login</a>
-                <a href="#" class="terms-txt">Forget your password?</a>
-              </div>  
-            </form>
+            </div>
           </div>
         </div>  
       </div>
@@ -80,6 +76,38 @@
       function closeNav() {
         document.getElementById("myNav").style.height = "0%";
       }
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+
+          var reader = new FileReader();
+
+          reader.onload = function(e) {
+            $('.image-upload-wrap').hide();
+
+            $('.file-upload-image').attr('src', e.target.result);
+            $('.file-upload-content').show();
+
+            $('.image-title').html(input.files[0].name);
+          };
+
+          reader.readAsDataURL(input.files[0]);
+
+        } else {
+          removeUpload();
+        }
+      }
+
+      function removeUpload() {
+        $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+        $('.file-upload-content').hide();
+        $('.image-upload-wrap').show();
+      }
+      $('.image-upload-wrap').bind('dragover', function () {
+              $('.image-upload-wrap').addClass('image-dropping');
+          });
+          $('.image-upload-wrap').bind('dragleave', function () {
+              $('.image-upload-wrap').removeClass('image-dropping');
+      });
     </script>
   </body>
 </html>

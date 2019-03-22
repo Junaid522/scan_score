@@ -1,12 +1,33 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block content %}
-<body>
-
-<div class="header-title"  style="margin-right: 50%">
-    <h1>ACT Score Report</h1>
-</div>
-      <div class="container">
+<!Doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Score Scan</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header card-header">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              <div class="logo-holder">
+                <img src="../static/img/logo.png" alt="Main logo" />
+              </div>  
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <div class="header-title">
+                <h1>ACT Score Report</h1>
+              </div>  
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
         <div class="row">
           <div class="col-xs-12 col-sm-8">
             <div class="row">
@@ -99,16 +120,22 @@
                   <table class="table table-score">
                     <thead>
                       <tr>
-                        <th width="30%">Section</th>
-                        <th width="10%">Section</th>
-                        <th width="60%"></th>
+                        <th width="15%">KEY TO</th>
+                        <th width="5%"></th>
+                        <th width="80%"></th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td>English</td>
-                        <td>74</td>
-                        <td></td>
+                        <td style="background-color: #ffff99;text-align: center;">+</td>
+                        <td>Your Awswer was correct</td>
+                      </tr>
+                      
+                      <tr>
+                        <td>English</td>
+                        <td style="background-color: #ffff99;text-align: center;">+</td>
+                        <td>Your Awswer was correct</td>
                       </tr>
                     </tbody>
                   </table>    
@@ -116,11 +143,1043 @@
               </div>
             </div>
           </div>
+          <div class="col-xs-12 col-sm-4">
+            <div class="table-responsive">
+                  <table class="table table-leftscore">
+                    <thead>
+                      <tr>
+                        <th width="30%">SECTION</th>
+                        <th width="20%">TYPE</th>
+                        <th width="10%">+</th>
+                        <th width="10%">x</th>
+                        <th width="10%">o</th>
+                        <th width="20%">TOTAL</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>English</td>
+                        <td>E</td>
+                        <td>20</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>50</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>E</td>
+                        <td>20</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>50</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>E</td>
+                        <td>20</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>50</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>E</td>
+                        <td>20</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>50</td>
+                      </tr>
+                    </tbody>
+                  </table> 
+                  <table class="table table-leftscore">
+                    <thead>
+                      <tr>
+                        <th width="30%"></th>
+                        <th width="20%">TOTAL</th>
+                        <th width="10%">74</th>
+                        <th width="10%">10</th>
+                        <th width="10%">5</th>
+                        <th width="20%">100</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>English</td>
+                        <td>E</td>
+                        <td>20</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>50</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>E</td>
+                        <td>20</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>50</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>E</td>
+                        <td>20</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>50</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>E</td>
+                        <td>20</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>50</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table class="table table-leftscore">
+                    <thead>
+                      <tr>
+                        <th width="30%"></th>
+                        <th width="20%">TOTAL</th>
+                        <th width="10%">74</th>
+                        <th width="10%">10</th>
+                        <th width="10%">5</th>
+                        <th width="20%">100</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>English</td>
+                        <td>E</td>
+                        <td>20</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>50</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>E</td>
+                        <td>20</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>50</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>E</td>
+                        <td>20</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>50</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>E</td>
+                        <td>20</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>50</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table class="table table-leftscore">
+                    <thead>
+                      <tr>
+                        <th width="30%"></th>
+                        <th width="20%">TOTAL</th>
+                        <th width="10%">74</th>
+                        <th width="10%">10</th>
+                        <th width="10%">5</th>
+                        <th width="20%">100</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>English</td>
+                        <td>E</td>
+                        <td>20</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>50</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>E</td>
+                        <td>20</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>50</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>E</td>
+                        <td>20</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>50</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>E</td>
+                        <td>20</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>50</td>
+                      </tr>
+                    </tbody>
+                  </table>  
+                  <table class="table table-leftscore">
+                    <thead>
+                      <tr>
+                        <th width="30%"></th>
+                        <th width="20%">TOTAL</th>
+                        <th width="10%">74</th>
+                        <th width="10%">10</th>
+                        <th width="10%">5</th>
+                        <th width="20%">100</th>
+                      </tr>
+                    </thead>
+                  </table> 
+                </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-9">
+            <p class="mt-50">ENGLISH</p>
+            <table class="table table-question">
+              <thead>
+                <tr>
+                  <th width="12.5%" class="row-purple">Question No.</th>
+                  <th width="3.5%" class="row-purple">1</th>
+                  <th width="3.5%" class="row-purple">2</th>
+                  <th width="3.5%" class="row-purple">3</th>
+                  <th width="3.5%" class="row-purple">4</th>
+                  <th width="3.5%" class="row-purple">5</th>
+                  <th width="3.5%" class="row-purple">6</th>
+                  <th width="3.5%" class="row-purple">7</th>
+                  <th width="3.5%" class="row-purple">8</th>
+                  <th width="3.5%" class="row-purple">9</th>
+                  <th width="3.5%" class="row-purple">10</th>
+                  <th width="3.5%" class="row-purple">11</th>
+                  <th width="3.5%" class="row-purple">12</th>
+                  <th width="3.5%" class="row-purple">10</th>
+                  <th width="3.5%" class="row-purple">11</th>
+                  <th width="3.5%" class="row-purple">12</th>
+                  <th width="3.5%"  class="row-info">10</th>
+                  <th width="3.5%" class="row-info">11</th>
+                  <th width="3.5%" class="row-info">12</th>
+                  <th width="3.5%" class="row-info">10</th>
+                  <th width="3.5%" class="row-info">11</th>
+                  <th width="3.5%" class="row-info">12</th>
+                  <th width="3.5%" class="row-info">10</th>
+                  <th width="3.5%" class="row-info">11</th>
+                  <th width="3.5%" class="row-info">12</th>
+                  <th width="3.5%" class="row-info">10</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td width="12.5%">Answer No.</td>
+                  <td width="3.5%">1</td>
+                  <td width="3.5%">2</td>
+                  <td width="3.5%">3</td>
+                  <td width="3.5%">4</td>
+                  <td width="3.5%">5</td>
+                  <td width="3.5%">6</td>
+                  <td width="3.5%">7</td>
+                  <td width="3.5%">8</td>
+                  <td width="3.5%">9</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                </tr>
+                <tr>
+                  <td width="12.5%">Answer No.</td>
+                  <td width="3.5%">1</td>
+                  <td width="3.5%">2</td>
+                  <td width="3.5%">3</td>
+                  <td width="3.5%">4</td>
+                  <td width="3.5%">5</td>
+                  <td width="3.5%">6</td>
+                  <td width="3.5%">7</td>
+                  <td width="3.5%">8</td>
+                  <td width="3.5%">9</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="table table-question">
+              <thead>
+                <tr>
+                  <th width="12.5%" class="row-purple">Question No.</th>
+                  <th width="3.5%" class="row-purple">1</th>
+                  <th width="3.5%" class="row-purple">2</th>
+                  <th width="3.5%" class="row-purple">3</th>
+                  <th width="3.5%" class="row-purple">4</th>
+                  <th width="3.5%" class="row-purple">5</th>
+                  <th width="3.5%" class="row-purple">6</th>
+                  <th width="3.5%" class="row-purple">7</th>
+                  <th width="3.5%" class="row-purple">8</th>
+                  <th width="3.5%" class="row-purple">9</th>
+                  <th width="3.5%" class="row-purple">10</th>
+                  <th width="3.5%" class="row-purple">11</th>
+                  <th width="3.5%" class="row-purple">12</th>
+                  <th width="3.5%" class="row-purple">10</th>
+                  <th width="3.5%" class="row-purple">11</th>
+                  <th width="3.5%" class="row-purple">12</th>
+                  <th width="3.5%"  class="row-info">10</th>
+                  <th width="3.5%" class="row-info">11</th>
+                  <th width="3.5%" class="row-info">12</th>
+                  <th width="3.5%" class="row-info">10</th>
+                  <th width="3.5%" class="row-info">11</th>
+                  <th width="3.5%" class="row-info">12</th>
+                  <th width="3.5%" class="row-info">10</th>
+                  <th width="3.5%" class="row-info">11</th>
+                  <th width="3.5%" class="row-info">12</th>
+                  <th width="3.5%" class="row-info">10</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td width="12.5%">Answer No.</td>
+                  <td width="3.5%">1</td>
+                  <td width="3.5%">2</td>
+                  <td width="3.5%">3</td>
+                  <td width="3.5%">4</td>
+                  <td width="3.5%">5</td>
+                  <td width="3.5%">6</td>
+                  <td width="3.5%">7</td>
+                  <td width="3.5%">8</td>
+                  <td width="3.5%">9</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                </tr>
+                <tr>
+                  <td width="12.5%">Answer No.</td>
+                  <td width="3.5%">1</td>
+                  <td width="3.5%">2</td>
+                  <td width="3.5%">3</td>
+                  <td width="3.5%">4</td>
+                  <td width="3.5%">5</td>
+                  <td width="3.5%">6</td>
+                  <td width="3.5%">7</td>
+                  <td width="3.5%">8</td>
+                  <td width="3.5%">9</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="table table-question">
+              <thead>
+                <tr>
+                  <th width="12.5%" class="row-purple">Question No.</th>
+                  <th width="3.5%" class="row-purple">1</th>
+                  <th width="3.5%" class="row-purple">2</th>
+                  <th width="3.5%" class="row-purple">3</th>
+                  <th width="3.5%" class="row-purple">4</th>
+                  <th width="3.5%" class="row-purple">5</th>
+                  <th width="3.5%" class="row-purple">6</th>
+                  <th width="3.5%" class="row-purple">7</th>
+                  <th width="3.5%" class="row-purple">8</th>
+                  <th width="3.5%" class="row-purple">9</th>
+                  <th width="3.5%" class="row-purple">10</th>
+                  <th width="3.5%" class="row-purple">11</th>
+                  <th width="3.5%" class="row-purple">12</th>
+                  <th width="3.5%" class="row-purple">10</th>
+                  <th width="3.5%" class="row-purple">11</th>
+                  <th width="3.5%" class="row-purple">12</th>
+                  <th width="3.5%"  class="row-info">10</th>
+                  <th width="3.5%" class="row-info">11</th>
+                  <th width="3.5%" class="row-info">12</th>
+                  <th width="3.5%" class="row-info">10</th>
+                  <th width="3.5%" class="row-info">11</th>
+                  <th width="3.5%" class="row-info">12</th>
+                  <th width="3.5%" class="row-info">10</th>
+                  <th width="3.5%" class="row-info">11</th>
+                  <th width="3.5%" class="row-info">12</th>
+                  <th width="3.5%" class="row-info">10</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td width="12.5%">Answer No.</td>
+                  <td width="3.5%">1</td>
+                  <td width="3.5%">2</td>
+                  <td width="3.5%">3</td>
+                  <td width="3.5%">4</td>
+                  <td width="3.5%">5</td>
+                  <td width="3.5%">6</td>
+                  <td width="3.5%">7</td>
+                  <td width="3.5%">8</td>
+                  <td width="3.5%">9</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                </tr>
+                <tr>
+                  <td width="12.5%">Answer No.</td>
+                  <td width="3.5%">1</td>
+                  <td width="3.5%">2</td>
+                  <td width="3.5%">3</td>
+                  <td width="3.5%">4</td>
+                  <td width="3.5%">5</td>
+                  <td width="3.5%">6</td>
+                  <td width="3.5%">7</td>
+                  <td width="3.5%">8</td>
+                  <td width="3.5%">9</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="row mb-50">
+          <div class="col-xs-12 col-sm-8">
+            <p class="mt-50">ENGLISH</p>
+            <table class="table table-question">
+              <thead>
+                <tr>
+                  <th width="12.5%" class="row-purple">Question No.</th>
+                  <th width="3.5%" class="row-purple">1</th>
+                  <th width="3.5%" class="row-purple">2</th>
+                  <th width="3.5%" class="row-purple">3</th>
+                  <th width="3.5%" class="row-purple">4</th>
+                  <th width="3.5%" class="row-purple">5</th>
+                  <th width="3.5%" class="row-purple">6</th>
+                  <th width="3.5%" class="row-purple">7</th>
+                  <th width="3.5%" class="row-purple">8</th>
+                  <th width="3.5%" class="row-purple">9</th>
+                  <th width="3.5%" class="row-purple">10</th>
+                  <th width="3.5%" class="row-purple">11</th>
+                  <th width="3.5%" class="row-purple">12</th>
+                  <th width="3.5%" class="row-purple">10</th>
+                  <th width="3.5%" class="row-purple">11</th>
+                  <th width="3.5%" class="row-purple">12</th>
+                  <th width="3.5%"  class="row-info">10</th>
+                  <th width="3.5%" class="row-info">11</th>
+                  <th width="3.5%" class="row-info">12</th>
+                  <th width="3.5%" class="row-info">10</th>
+                  <th width="3.5%" class="row-info">11</th>
+                  <th width="3.5%" class="row-info">12</th>
+                  <th width="3.5%" class="row-info">10</th>
+                  <th width="3.5%" class="row-info">11</th>
+                  <th width="3.5%" class="row-info">12</th>
+                  <th width="3.5%" class="row-info">10</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td width="12.5%">Answer No.</td>
+                  <td width="3.5%">1</td>
+                  <td width="3.5%">2</td>
+                  <td width="3.5%">3</td>
+                  <td width="3.5%">4</td>
+                  <td width="3.5%">5</td>
+                  <td width="3.5%">6</td>
+                  <td width="3.5%">7</td>
+                  <td width="3.5%">8</td>
+                  <td width="3.5%">9</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                </tr>
+                <tr>
+                  <td width="12.5%">Answer No.</td>
+                  <td width="3.5%">1</td>
+                  <td width="3.5%">2</td>
+                  <td width="3.5%">3</td>
+                  <td width="3.5%">4</td>
+                  <td width="3.5%">5</td>
+                  <td width="3.5%">6</td>
+                  <td width="3.5%">7</td>
+                  <td width="3.5%">8</td>
+                  <td width="3.5%">9</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="table table-question">
+              <thead>
+                <tr>
+                  <th width="12.5%" class="row-purple">Question No.</th>
+                  <th width="3.5%" class="row-purple">1</th>
+                  <th width="3.5%" class="row-purple">2</th>
+                  <th width="3.5%" class="row-purple">3</th>
+                  <th width="3.5%" class="row-purple">4</th>
+                  <th width="3.5%" class="row-purple">5</th>
+                  <th width="3.5%" class="row-purple">6</th>
+                  <th width="3.5%" class="row-purple">7</th>
+                  <th width="3.5%" class="row-purple">8</th>
+                  <th width="3.5%" class="row-purple">9</th>
+                  <th width="3.5%" class="row-purple">10</th>
+                  <th width="3.5%" class="row-purple">11</th>
+                  <th width="3.5%" class="row-purple">12</th>
+                  <th width="3.5%" class="row-purple">10</th>
+                  <th width="3.5%" class="row-purple">11</th>
+                  <th width="3.5%" class="row-purple">12</th>
+                  <th width="3.5%"  class="row-info">10</th>
+                  <th width="3.5%" class="row-info">11</th>
+                  <th width="3.5%" class="row-info">12</th>
+                  <th width="3.5%" class="row-info">10</th>
+                  <th width="3.5%" class="row-info">11</th>
+                  <th width="3.5%" class="row-info">12</th>
+                  <th width="3.5%" class="row-info">10</th>
+                  <th width="3.5%" class="row-info">11</th>
+                  <th width="3.5%" class="row-info">12</th>
+                  <th width="3.5%" class="row-info">10</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td width="12.5%">Answer No.</td>
+                  <td width="3.5%">1</td>
+                  <td width="3.5%">2</td>
+                  <td width="3.5%">3</td>
+                  <td width="3.5%">4</td>
+                  <td width="3.5%">5</td>
+                  <td width="3.5%">6</td>
+                  <td width="3.5%">7</td>
+                  <td width="3.5%">8</td>
+                  <td width="3.5%">9</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                </tr>
+                <tr>
+                  <td width="12.5%">Answer No.</td>
+                  <td width="3.5%">1</td>
+                  <td width="3.5%">2</td>
+                  <td width="3.5%">3</td>
+                  <td width="3.5%">4</td>
+                  <td width="3.5%">5</td>
+                  <td width="3.5%">6</td>
+                  <td width="3.5%">7</td>
+                  <td width="3.5%">8</td>
+                  <td width="3.5%">9</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="table table-question">
+              <thead>
+                <tr>
+                  <th width="12.5%" class="row-purple">Question No.</th>
+                  <th width="3.5%" class="row-purple">1</th>
+                  <th width="3.5%" class="row-purple">2</th>
+                  <th width="3.5%" class="row-purple">3</th>
+                  <th width="3.5%" class="row-purple">4</th>
+                  <th width="3.5%" class="row-purple">5</th>
+                  <th width="3.5%" class="row-purple">6</th>
+                  <th width="3.5%" class="row-purple">7</th>
+                  <th width="3.5%" class="row-purple">8</th>
+                  <th width="3.5%" class="row-purple">9</th>
+                  <th width="3.5%" class="row-purple">10</th>
+                  <th width="3.5%" class="row-purple">11</th>
+                  <th width="3.5%" class="row-purple">12</th>
+                  <th width="3.5%" class="row-purple">10</th>
+                  <th width="3.5%" class="row-purple">11</th>
+                  <th width="3.5%" class="row-purple">12</th>
+                  <th width="3.5%"  class="row-info">10</th>
+                  <th width="3.5%" class="row-info">11</th>
+                  <th width="3.5%" class="row-info">12</th>
+                  <th width="3.5%" class="row-info">10</th>
+                  <th width="3.5%" class="row-info">11</th>
+                  <th width="3.5%" class="row-info">12</th>
+                  <th width="3.5%" class="row-info">10</th>
+                  <th width="3.5%" class="row-info">11</th>
+                  <th width="3.5%" class="row-info">12</th>
+                  <th width="3.5%" class="row-info">10</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td width="12.5%">Answer No.</td>
+                  <td width="3.5%">1</td>
+                  <td width="3.5%">2</td>
+                  <td width="3.5%">3</td>
+                  <td width="3.5%">4</td>
+                  <td width="3.5%">5</td>
+                  <td width="3.5%">6</td>
+                  <td width="3.5%">7</td>
+                  <td width="3.5%">8</td>
+                  <td width="3.5%">9</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                </tr>
+                <tr>
+                  <td width="12.5%">Answer No.</td>
+                  <td width="3.5%">1</td>
+                  <td width="3.5%">2</td>
+                  <td width="3.5%">3</td>
+                  <td width="3.5%">4</td>
+                  <td width="3.5%">5</td>
+                  <td width="3.5%">6</td>
+                  <td width="3.5%">7</td>
+                  <td width="3.5%">8</td>
+                  <td width="3.5%">9</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                </tr>
+              </tbody>
+            </table>
+             <p class="mt-50">ENGLISH</p>
+            <table class="table table-question">
+              <thead>
+                <tr>
+                  <th width="12.5%" class="row-purple">Question No.</th>
+                  <th width="3.5%" class="row-purple">1</th>
+                  <th width="3.5%" class="row-purple">2</th>
+                  <th width="3.5%" class="row-purple">3</th>
+                  <th width="3.5%" class="row-purple">4</th>
+                  <th width="3.5%" class="row-purple">5</th>
+                  <th width="3.5%" class="row-purple">6</th>
+                  <th width="3.5%" class="row-purple">7</th>
+                  <th width="3.5%" class="row-purple">8</th>
+                  <th width="3.5%" class="row-purple">9</th>
+                  <th width="3.5%" class="row-purple">10</th>
+                  <th width="3.5%" class="row-purple">11</th>
+                  <th width="3.5%" class="row-purple">12</th>
+                  <th width="3.5%" class="row-purple">10</th>
+                  <th width="3.5%" class="row-purple">11</th>
+                  <th width="3.5%" class="row-purple">12</th>
+                  <th width="3.5%"  class="row-info">10</th>
+                  <th width="3.5%" class="row-info">11</th>
+                  <th width="3.5%" class="row-info">12</th>
+                  <th width="3.5%" class="row-info">10</th>
+                  <th width="3.5%" class="row-info">11</th>
+                  <th width="3.5%" class="row-info">12</th>
+                  <th width="3.5%" class="row-info">10</th>
+                  <th width="3.5%" class="row-info">11</th>
+                  <th width="3.5%" class="row-info">12</th>
+                  <th width="3.5%" class="row-info">10</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td width="12.5%">Answer No.</td>
+                  <td width="3.5%">1</td>
+                  <td width="3.5%">2</td>
+                  <td width="3.5%">3</td>
+                  <td width="3.5%">4</td>
+                  <td width="3.5%">5</td>
+                  <td width="3.5%">6</td>
+                  <td width="3.5%">7</td>
+                  <td width="3.5%">8</td>
+                  <td width="3.5%">9</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                </tr>
+                <tr>
+                  <td width="12.5%">Answer No.</td>
+                  <td width="3.5%">1</td>
+                  <td width="3.5%">2</td>
+                  <td width="3.5%">3</td>
+                  <td width="3.5%">4</td>
+                  <td width="3.5%">5</td>
+                  <td width="3.5%">6</td>
+                  <td width="3.5%">7</td>
+                  <td width="3.5%">8</td>
+                  <td width="3.5%">9</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="table table-question">
+              <thead>
+                <tr>
+                  <th width="12.5%" class="row-purple">Question No.</th>
+                  <th width="3.5%" class="row-purple">1</th>
+                  <th width="3.5%" class="row-purple">2</th>
+                  <th width="3.5%" class="row-purple">3</th>
+                  <th width="3.5%" class="row-purple">4</th>
+                  <th width="3.5%" class="row-purple">5</th>
+                  <th width="3.5%" class="row-purple">6</th>
+                  <th width="3.5%" class="row-purple">7</th>
+                  <th width="3.5%" class="row-purple">8</th>
+                  <th width="3.5%" class="row-purple">9</th>
+                  <th width="3.5%" class="row-purple">10</th>
+                  <th width="3.5%" class="row-purple">11</th>
+                  <th width="3.5%" class="row-purple">12</th>
+                  <th width="3.5%" class="row-purple">10</th>
+                  <th width="3.5%" class="row-purple">11</th>
+                  <th width="3.5%" class="row-purple">12</th>
+                  <th width="3.5%"  class="row-info">10</th>
+                  <th width="3.5%" class="row-info">11</th>
+                  <th width="3.5%" class="row-info">12</th>
+                  <th width="3.5%" class="row-info">10</th>
+                  <th width="3.5%" class="row-info">11</th>
+                  <th width="3.5%" class="row-info">12</th>
+                  <th width="3.5%" class="row-info">10</th>
+                  <th width="3.5%" class="row-info">11</th>
+                  <th width="3.5%" class="row-info">12</th>
+                  <th width="3.5%" class="row-info">10</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td width="12.5%">Answer No.</td>
+                  <td width="3.5%">1</td>
+                  <td width="3.5%">2</td>
+                  <td width="3.5%">3</td>
+                  <td width="3.5%">4</td>
+                  <td width="3.5%">5</td>
+                  <td width="3.5%">6</td>
+                  <td width="3.5%">7</td>
+                  <td width="3.5%">8</td>
+                  <td width="3.5%">9</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                </tr>
+                <tr>
+                  <td width="12.5%">Answer No.</td>
+                  <td width="3.5%">1</td>
+                  <td width="3.5%">2</td>
+                  <td width="3.5%">3</td>
+                  <td width="3.5%">4</td>
+                  <td width="3.5%">5</td>
+                  <td width="3.5%">6</td>
+                  <td width="3.5%">7</td>
+                  <td width="3.5%">8</td>
+                  <td width="3.5%">9</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="table table-question">
+              <thead>
+                <tr>
+                  <th width="12.5%" class="row-purple">Question No.</th>
+                  <th width="3.5%" class="row-purple">1</th>
+                  <th width="3.5%" class="row-purple">2</th>
+                  <th width="3.5%" class="row-purple">3</th>
+                  <th width="3.5%" class="row-purple">4</th>
+                  <th width="3.5%" class="row-purple">5</th>
+                  <th width="3.5%" class="row-purple">6</th>
+                  <th width="3.5%" class="row-purple">7</th>
+                  <th width="3.5%" class="row-purple">8</th>
+                  <th width="3.5%" class="row-purple">9</th>
+                  <th width="3.5%" class="row-purple">10</th>
+                  <th width="3.5%" class="row-purple">11</th>
+                  <th width="3.5%" class="row-purple">12</th>
+                  <th width="3.5%" class="row-purple">10</th>
+                  <th width="3.5%" class="row-purple">11</th>
+                  <th width="3.5%" class="row-purple">12</th>
+                  <th width="3.5%"  class="row-info">10</th>
+                  <th width="3.5%" class="row-info">11</th>
+                  <th width="3.5%" class="row-info">12</th>
+                  <th width="3.5%" class="row-info">10</th>
+                  <th width="3.5%" class="row-info">11</th>
+                  <th width="3.5%" class="row-info">12</th>
+                  <th width="3.5%" class="row-info">10</th>
+                  <th width="3.5%" class="row-info">11</th>
+                  <th width="3.5%" class="row-info">12</th>
+                  <th width="3.5%" class="row-info">10</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td width="12.5%">Answer No.</td>
+                  <td width="3.5%">1</td>
+                  <td width="3.5%">2</td>
+                  <td width="3.5%">3</td>
+                  <td width="3.5%">4</td>
+                  <td width="3.5%">5</td>
+                  <td width="3.5%">6</td>
+                  <td width="3.5%">7</td>
+                  <td width="3.5%">8</td>
+                  <td width="3.5%">9</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                </tr>
+                <tr>
+                  <td width="12.5%">Answer No.</td>
+                  <td width="3.5%">1</td>
+                  <td width="3.5%">2</td>
+                  <td width="3.5%">3</td>
+                  <td width="3.5%">4</td>
+                  <td width="3.5%">5</td>
+                  <td width="3.5%">6</td>
+                  <td width="3.5%">7</td>
+                  <td width="3.5%">8</td>
+                  <td width="3.5%">9</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <div class="comment-box">
+              <ul>
+                <li>Lorem Ipsum is simply dummy text</li>
+                <li>Lorem Ipsum is simply dummy text</li>
+                <li>Lorem Ipsum is simply dummy text</li>
+                <li>Lorem Ipsum is simply dummy text</li>
+                <li>Lorem Ipsum is simply dummy text</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <script src="../static/js/jquery-3.2.1.slim.min.js"></script>
-    <script src="../static/js/popper.min.js"></script>
+    <script src="../../static/js/popper.min.js"></script>
     <script src="../static/js/bootstrap.min.js"></script>
   </body>
-{% endblock %}
+</html>

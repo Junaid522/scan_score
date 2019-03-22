@@ -20,7 +20,7 @@ from scan_score import views as scan_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^login/', scan_views.login, name='login'),
+    url(r'^login/', auth_views.login, name='login'),
     url(r'^home/', scan_views.home, name='home'),
     url(r'^logout/$', auth_views.logout, {'next_page': 'login'}, name='logout'),
 

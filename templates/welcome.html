@@ -1,3 +1,4 @@
+{% block content %}
 <!Doctype html>
 <html lang="en">
   <head>
@@ -43,9 +44,9 @@
             <div class="main-logo">
               <img src="../static/img/logo.png" alt="logo" />
             </div>
-            <div class="buttons text-center">
+              <div class="buttons text-center">
               <a href="#" class="btn btn-md btn-custom">Register</a>
-              <a href="#" class="btn btn-md btn-custom-2">Login</a>
+              <a href="{% url 'login' %}" class="btn btn-md btn-custom-2">Login</a>
               <a href="#" class="terms-txt">Read terms and privacy policy.</a>
             </div>
           </div>
@@ -68,3 +69,4 @@
     </script>
   </body>
 </html>
+{% endblock %}

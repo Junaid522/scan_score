@@ -37,17 +37,17 @@
                     <tbody>
                       <tr>
                         <td scope="col" width="45%">Student</td>
-                        <td width="45%">Student Name</td>
+                        <td width="45%">{{ result.student_name }}</td>
                         <td width="10%"></td>
                       </tr>
                       <tr>
                         <td scope="col" width="45%">Test Date</td>
-                        <td width="45%">Test Date</td>
+                        <td width="45%">{{ result.test_date }}</td>
                         <td width="10%"></td>
                       </tr>
                       <tr>
                         <td scope="col" width="45%">Test Form</td>
-                        <td width="45%">Test Form #</td>
+                        <td width="45%">{{ result.test_form_no }}</td>
                         <td width="10%"></td>
                       </tr>
                     </tbody>
@@ -69,31 +69,31 @@
                     <tbody>
                       <tr>
                         <td>English</td>
-                        <td>74</td>
-                        <td>36</td>
-                        <td>0</td>
-                        <td>15</td>
+                        <td>{{ result.english.score }}</td>
+                        <td>{{ result.english.correct }}</td>
+                        <td>{{ result.english.incorrect }}</td>
+                        <td>{{ result.english.omitted }}</td>
                       </tr>
                       <tr>
-                        <td>English</td>
-                        <td>74</td>
-                        <td>36</td>
-                        <td>0</td>
-                        <td>15</td>
+                        <td>Math</td>
+                        <td>{{ result.math.score }}</td>
+                        <td>{{ result.math.correct }}</td>
+                        <td>{{ result.math.incorrect }}</td>
+                        <td>{{ result.math.omitted }}</td>
                       </tr>
                       <tr>
-                        <td>English</td>
-                        <td>74</td>
-                        <td>36</td>
-                        <td>0</td>
-                        <td>15</td>
+                        <td>Reading</td>
+                        <td>{{ result.reading.score }}</td>
+                        <td>{{ result.reading.correct }}</td>
+                        <td>{{ result.reading.incorrect }}</td>
+                        <td>{{ result.reading.omitted }}</td>
                       </tr>
                       <tr>
-                        <td>English</td>
-                        <td>74</td>
-                        <td>36</td>
-                        <td>0</td>
-                        <td>15</td>
+                        <td>Science</td>
+                        <td>{{ result.science.score }}</td>
+                        <td>{{ result.science.correct }}</td>
+                        <td>{{ result.science.incorrect }}</td>
+                        <td>{{ result.science.omitted }}</td>
                       </tr>
                       <tr class="tble-row">
                         <td width="35%">English</td>
@@ -363,52 +363,142 @@
                   <th width="3.5%" class="row-purple">10</th>
                   <th width="3.5%" class="row-purple">11</th>
                   <th width="3.5%" class="row-purple">12</th>
-                  <th width="3.5%" class="row-purple">10</th>
-                  <th width="3.5%" class="row-purple">11</th>
-                  <th width="3.5%" class="row-purple">12</th>
-                  <th width="3.5%"  class="row-info">10</th>
-                  <th width="3.5%" class="row-info">11</th>
-                  <th width="3.5%" class="row-info">12</th>
-                  <th width="3.5%" class="row-info">10</th>
-                  <th width="3.5%" class="row-info">11</th>
-                  <th width="3.5%" class="row-info">12</th>
-                  <th width="3.5%" class="row-info">10</th>
-                  <th width="3.5%" class="row-info">11</th>
-                  <th width="3.5%" class="row-info">12</th>
-                  <th width="3.5%" class="row-info">10</th>
+                  <th width="3.5%" class="row-purple">13</th>
+                  <th width="3.5%" class="row-purple">14</th>
+                  <th width="3.5%" class="row-purple">15</th>
+                  <th width="3.5%"  class="row-info">16</th>
+                  <th width="3.5%" class="row-info">17</th>
+                  <th width="3.5%" class="row-info">18</th>
+                  <th width="3.5%" class="row-info">19</th>
+                  <th width="3.5%" class="row-info">20</th>
+                  <th width="3.5%" class="row-info">21</th>
+                  <th width="3.5%" class="row-info">22</th>
+                  <th width="3.5%" class="row-info">23</th>
+                  <th width="3.5%" class="row-info">24</th>
+                  <th width="3.5%" class="row-info">25</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td width="12.5%">Answer No.</td>
-                  <td width="3.5%">1</td>
-                  <td width="3.5%">2</td>
-                  <td width="3.5%">3</td>
-                  <td width="3.5%">4</td>
-                  <td width="3.5%">5</td>
-                  <td width="3.5%">6</td>
-                  <td width="3.5%">7</td>
-                  <td width="3.5%">8</td>
-                  <td width="3.5%">9</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
+                  <td width="12.5%">Correct Answers</td>
+                  <td width="3.5%">{{ result.english.answers.q1 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q2 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q3 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q4 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q5 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q6 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q7 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q8 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q9 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q10 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q11 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q12 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q13 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q14 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q15 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q16 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q17 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q18 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q19 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q20 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q21 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q22 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q23 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q24 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q25 }}</td>
                 </tr>
                 <tr>
-                  <td width="12.5%">Answer No.</td>
+                  <td width="12.5%">Your answers</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">H</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">B</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">G</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">D</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">J</td>
+                  <td width="3.5%">+</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="table table-question">
+              <thead>
+                <tr>
+                  <th width="12.5%" class="row-purple">Question No.</th>
+                  <th width="3.5%" class="row-purple">26</th>
+                  <th width="3.5%" class="row-purple">27</th>
+                  <th width="3.5%" class="row-purple">28</th>
+                  <th width="3.5%" class="row-purple">29</th>
+                  <th width="3.5%" class="row-purple">30</th>
+                  <th width="3.5%" class="row-purple">31</th>
+                  <th width="3.5%" class="row-purple">32</th>
+                  <th width="3.5%" class="row-purple">33</th>
+                  <th width="3.5%" class="row-purple">34</th>
+                  <th width="3.5%" class="row-purple">35</th>
+                  <th width="3.5%" class="row-purple">36</th>
+                  <th width="3.5%" class="row-purple">37</th>
+                  <th width="3.5%" class="row-purple">38</th>
+                  <th width="3.5%" class="row-purple">39</th>
+                  <th width="3.5%" class="row-purple">40</th>
+                  <th width="3.5%"  class="row-info">41</th>
+                  <th width="3.5%" class="row-info">42</th>
+                  <th width="3.5%" class="row-info">43</th>
+                  <th width="3.5%" class="row-info">44</th>
+                  <th width="3.5%" class="row-info">45</th>
+                  <th width="3.5%" class="row-info">46</th>
+                  <th width="3.5%" class="row-info">47</th>
+                  <th width="3.5%" class="row-info">48</th>
+                  <th width="3.5%" class="row-info">49</th>
+                  <th width="3.5%" class="row-info">50</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td width="12.5%">Correct Answers</td>
+                  <td width="3.5%">{{ result.english.answers.q26 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q27 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q28 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q29 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q30 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q31 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q32 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q33 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q34 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q35 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q36 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q37 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q38 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q39 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q40 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q41 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q42 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q43 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q44 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q45 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q46 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q47 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q48 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q49 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q50 }}</td>
+                </tr>
+                <tr>
+                  <td width="12.5%">Your answers</td>
                   <td width="3.5%">1</td>
                   <td width="3.5%">2</td>
                   <td width="3.5%">3</td>
@@ -441,179 +531,89 @@
               <thead>
                 <tr>
                   <th width="12.5%" class="row-purple">Question No.</th>
-                  <th width="3.5%" class="row-purple">1</th>
-                  <th width="3.5%" class="row-purple">2</th>
-                  <th width="3.5%" class="row-purple">3</th>
-                  <th width="3.5%" class="row-purple">4</th>
-                  <th width="3.5%" class="row-purple">5</th>
-                  <th width="3.5%" class="row-purple">6</th>
-                  <th width="3.5%" class="row-purple">7</th>
-                  <th width="3.5%" class="row-purple">8</th>
-                  <th width="3.5%" class="row-purple">9</th>
-                  <th width="3.5%" class="row-purple">10</th>
-                  <th width="3.5%" class="row-purple">11</th>
-                  <th width="3.5%" class="row-purple">12</th>
-                  <th width="3.5%" class="row-purple">10</th>
-                  <th width="3.5%" class="row-purple">11</th>
-                  <th width="3.5%" class="row-purple">12</th>
-                  <th width="3.5%"  class="row-info">10</th>
-                  <th width="3.5%" class="row-info">11</th>
-                  <th width="3.5%" class="row-info">12</th>
-                  <th width="3.5%" class="row-info">10</th>
-                  <th width="3.5%" class="row-info">11</th>
-                  <th width="3.5%" class="row-info">12</th>
-                  <th width="3.5%" class="row-info">10</th>
-                  <th width="3.5%" class="row-info">11</th>
-                  <th width="3.5%" class="row-info">12</th>
-                  <th width="3.5%" class="row-info">10</th>
+                  <th width="3.5%" class="row-purple">51</th>
+                  <th width="3.5%" class="row-purple">52</th>
+                  <th width="3.5%" class="row-purple">53</th>
+                  <th width="3.5%" class="row-purple">54</th>
+                  <th width="3.5%" class="row-purple">55</th>
+                  <th width="3.5%" class="row-purple">56</th>
+                  <th width="3.5%" class="row-purple">57</th>
+                  <th width="3.5%" class="row-purple">58</th>
+                  <th width="3.5%" class="row-purple">59</th>
+                  <th width="3.5%" class="row-purple">60</th>
+                  <th width="3.5%" class="row-purple">61</th>
+                  <th width="3.5%" class="row-purple">62</th>
+                  <th width="3.5%" class="row-purple">63</th>
+                  <th width="3.5%" class="row-purple">64</th>
+                  <th width="3.5%" class="row-purple">65</th>
+                  <th width="3.5%"  class="row-info">66</th>
+                  <th width="3.5%" class="row-info">67</th>
+                  <th width="3.5%" class="row-info">68</th>
+                  <th width="3.5%" class="row-info">69</th>
+                  <th width="3.5%" class="row-info">70</th>
+                  <th width="3.5%" class="row-info">71</th>
+                  <th width="3.5%" class="row-info">72</th>
+                  <th width="3.5%" class="row-info">73</th>
+                  <th width="3.5%" class="row-info">74</th>
+                  <th width="3.5%" class="row-info">75</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td width="12.5%">Answer No.</td>
-                  <td width="3.5%">1</td>
-                  <td width="3.5%">2</td>
-                  <td width="3.5%">3</td>
-                  <td width="3.5%">4</td>
-                  <td width="3.5%">5</td>
-                  <td width="3.5%">6</td>
-                  <td width="3.5%">7</td>
-                  <td width="3.5%">8</td>
-                  <td width="3.5%">9</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
+                  <td width="12.5%">Correct answers</td>
+                  <td width="3.5%">{{ result.english.answers.q51 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q52 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q53 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q54 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q55 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q56 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q57 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q58 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q59 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q60 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q61 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q62 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q63 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q64 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q65 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q66 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q67 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q68 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q69 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q70 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q71 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q72 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q73 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q74 }}</td>
+                  <td width="3.5%">{{ result.english.answers.q75 }}</td>
                 </tr>
                 <tr>
-                  <td width="12.5%">Answer No.</td>
-                  <td width="3.5%">1</td>
-                  <td width="3.5%">2</td>
-                  <td width="3.5%">3</td>
-                  <td width="3.5%">4</td>
-                  <td width="3.5%">5</td>
-                  <td width="3.5%">6</td>
-                  <td width="3.5%">7</td>
-                  <td width="3.5%">8</td>
-                  <td width="3.5%">9</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                </tr>
-              </tbody>
-            </table>
-            <table class="table table-question">
-              <thead>
-                <tr>
-                  <th width="12.5%" class="row-purple">Question No.</th>
-                  <th width="3.5%" class="row-purple">1</th>
-                  <th width="3.5%" class="row-purple">2</th>
-                  <th width="3.5%" class="row-purple">3</th>
-                  <th width="3.5%" class="row-purple">4</th>
-                  <th width="3.5%" class="row-purple">5</th>
-                  <th width="3.5%" class="row-purple">6</th>
-                  <th width="3.5%" class="row-purple">7</th>
-                  <th width="3.5%" class="row-purple">8</th>
-                  <th width="3.5%" class="row-purple">9</th>
-                  <th width="3.5%" class="row-purple">10</th>
-                  <th width="3.5%" class="row-purple">11</th>
-                  <th width="3.5%" class="row-purple">12</th>
-                  <th width="3.5%" class="row-purple">10</th>
-                  <th width="3.5%" class="row-purple">11</th>
-                  <th width="3.5%" class="row-purple">12</th>
-                  <th width="3.5%"  class="row-info">10</th>
-                  <th width="3.5%" class="row-info">11</th>
-                  <th width="3.5%" class="row-info">12</th>
-                  <th width="3.5%" class="row-info">10</th>
-                  <th width="3.5%" class="row-info">11</th>
-                  <th width="3.5%" class="row-info">12</th>
-                  <th width="3.5%" class="row-info">10</th>
-                  <th width="3.5%" class="row-info">11</th>
-                  <th width="3.5%" class="row-info">12</th>
-                  <th width="3.5%" class="row-info">10</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td width="12.5%">Answer No.</td>
-                  <td width="3.5%">1</td>
-                  <td width="3.5%">2</td>
-                  <td width="3.5%">3</td>
-                  <td width="3.5%">4</td>
-                  <td width="3.5%">5</td>
-                  <td width="3.5%">6</td>
-                  <td width="3.5%">7</td>
-                  <td width="3.5%">8</td>
-                  <td width="3.5%">9</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                </tr>
-                <tr>
-                  <td width="12.5%">Answer No.</td>
-                  <td width="3.5%">1</td>
-                  <td width="3.5%">2</td>
-                  <td width="3.5%">3</td>
-                  <td width="3.5%">4</td>
-                  <td width="3.5%">5</td>
-                  <td width="3.5%">6</td>
-                  <td width="3.5%">7</td>
-                  <td width="3.5%">8</td>
-                  <td width="3.5%">9</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
+                  <td width="12.5%">Your answers</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">H</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">B</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">C</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">G</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
                 </tr>
               </tbody>
             </table>
@@ -621,7 +621,7 @@
         </div>
         <div class="row mb-50">
           <div class="col-xs-12 col-sm-8">
-            <p class="mt-50">ENGLISH</p>
+            <p class="mt-50">MATH</p>
             <table class="table table-question">
               <thead>
                 <tr>
@@ -638,49 +638,114 @@
                   <th width="3.5%" class="row-purple">10</th>
                   <th width="3.5%" class="row-purple">11</th>
                   <th width="3.5%" class="row-purple">12</th>
-                  <th width="3.5%" class="row-purple">10</th>
-                  <th width="3.5%" class="row-purple">11</th>
-                  <th width="3.5%" class="row-purple">12</th>
-                  <th width="3.5%"  class="row-info">10</th>
-                  <th width="3.5%" class="row-info">11</th>
-                  <th width="3.5%" class="row-info">12</th>
-                  <th width="3.5%" class="row-info">10</th>
-                  <th width="3.5%" class="row-info">11</th>
-                  <th width="3.5%" class="row-info">12</th>
-                  <th width="3.5%" class="row-info">10</th>
-                  <th width="3.5%" class="row-info">11</th>
-                  <th width="3.5%" class="row-info">12</th>
-                  <th width="3.5%" class="row-info">10</th>
+                  <th width="3.5%" class="row-purple">13</th>
+                  <th width="3.5%" class="row-purple">14</th>
+                  <th width="3.5%" class="row-purple">15</th>
+                  <th width="3.5%"  class="row-info">16</th>
+                  <th width="3.5%" class="row-info">17</th>
+                  <th width="3.5%" class="row-info">18</th>
+                  <th width="3.5%" class="row-info">19</th>
+                  <th width="3.5%" class="row-info">20</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td width="12.5%">Correct answers</td>
+                  <td width="3.5%">{{ result.math.answers.q1 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q2 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q3 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q4 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q5 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q6 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q7 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q8 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q9 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q10 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q11 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q12 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q13 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q14 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q15 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q16 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q17 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q18 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q19 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q20 }}</td>
+                </tr>
+                <tr>
+                  <td width="12.5%">Answer No.</td>
+                  <td width="3.5%">1</td>
+                  <td width="3.5%">2</td>
+                  <td width="3.5%">3</td>
+                  <td width="3.5%">4</td>
+                  <td width="3.5%">5</td>
+                  <td width="3.5%">6</td>
+                  <td width="3.5%">7</td>
+                  <td width="3.5%">8</td>
+                  <td width="3.5%">9</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                  <td width="3.5%">12</td>
+                  <td width="3.5%">10</td>
+                  <td width="3.5%">11</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="table table-question">
+              <thead>
+                <tr>
+                  <th width="12.5%" class="row-purple">Question No.</th>
+                  <th width="3.5%" class="row-purple">21</th>
+                  <th width="3.5%" class="row-purple">22</th>
+                  <th width="3.5%" class="row-purple">23</th>
+                  <th width="3.5%" class="row-purple">24</th>
+                  <th width="3.5%" class="row-purple">25</th>
+                  <th width="3.5%" class="row-purple">26</th>
+                  <th width="3.5%" class="row-purple">27</th>
+                  <th width="3.5%" class="row-purple">28</th>
+                  <th width="3.5%" class="row-purple">29</th>
+                  <th width="3.5%" class="row-purple">20</th>
+                  <th width="3.5%" class="row-purple">31</th>
+                  <th width="3.5%" class="row-purple">32</th>
+                  <th width="3.5%" class="row-purple">33</th>
+                  <th width="3.5%" class="row-purple">34</th>
+                  <th width="3.5%" class="row-purple">35</th>
+                  <th width="3.5%"  class="row-info">36</th>
+                  <th width="3.5%" class="row-info">37</th>
+                  <th width="3.5%" class="row-info">38</th>
+                  <th width="3.5%" class="row-info">39</th>
+                  <th width="3.5%" class="row-info">40</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td width="12.5%">Answer No.</td>
-                  <td width="3.5%">1</td>
-                  <td width="3.5%">2</td>
-                  <td width="3.5%">3</td>
-                  <td width="3.5%">4</td>
-                  <td width="3.5%">5</td>
-                  <td width="3.5%">6</td>
-                  <td width="3.5%">7</td>
-                  <td width="3.5%">8</td>
-                  <td width="3.5%">9</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
+                  <td width="3.5%">{{ result.math.answers.q21 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q22 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q23 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q24 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q25 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q26 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q27 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q28 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q29 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q30 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q31 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q32 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q33 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q34 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q35 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q36 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q37 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q38 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q39 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q40 }}</td>
                 </tr>
                 <tr>
                   <td width="12.5%">Answer No.</td>
@@ -704,14 +769,85 @@
                   <td width="3.5%">12</td>
                   <td width="3.5%">10</td>
                   <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
                 </tr>
               </tbody>
             </table>
+            <table class="table table-question">
+              <thead>
+                <tr>
+                  <th width="12.5%" class="row-purple">Question No.</th>
+                  <th width="3.5%" class="row-purple">41</th>
+                  <th width="3.5%" class="row-purple">42</th>
+                  <th width="3.5%" class="row-purple">43</th>
+                  <th width="3.5%" class="row-purple">44</th>
+                  <th width="3.5%" class="row-purple">45</th>
+                  <th width="3.5%" class="row-purple">46</th>
+                  <th width="3.5%" class="row-purple">47</th>
+                  <th width="3.5%" class="row-purple">48</th>
+                  <th width="3.5%" class="row-purple">49</th>
+                  <th width="3.5%" class="row-purple">50</th>
+                  <th width="3.5%" class="row-purple">51</th>
+                  <th width="3.5%" class="row-purple">52</th>
+                  <th width="3.5%" class="row-purple">53</th>
+                  <th width="3.5%" class="row-purple">54</th>
+                  <th width="3.5%" class="row-purple">55</th>
+                  <th width="3.5%"  class="row-info">56</th>
+                  <th width="3.5%" class="row-info">57</th>
+                  <th width="3.5%" class="row-info">58</th>
+                  <th width="3.5%" class="row-info">59</th>
+                  <th width="3.5%" class="row-info">60</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td width="12.5%">Correct answers</td>
+                  <td width="3.5%">{{ result.math.answers.q41 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q42 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q43 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q44 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q45 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q46 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q47 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q48 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q49 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q50 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q51 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q52 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q53 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q54 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q55 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q56 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q57 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q58 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q59 }}</td>
+                  <td width="3.5%">{{ result.math.answers.q60 }}</td>
+                </tr>
+                <tr>
+                  <td width="12.5%">Your Answer</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">F</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">C</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">B</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                </tr>
+              </tbody>
+            </table>
+             <p class="mt-50">READING</p>
             <table class="table table-question">
               <thead>
                 <tr>
@@ -728,80 +864,141 @@
                   <th width="3.5%" class="row-purple">10</th>
                   <th width="3.5%" class="row-purple">11</th>
                   <th width="3.5%" class="row-purple">12</th>
-                  <th width="3.5%" class="row-purple">10</th>
-                  <th width="3.5%" class="row-purple">11</th>
-                  <th width="3.5%" class="row-purple">12</th>
-                  <th width="3.5%"  class="row-info">10</th>
-                  <th width="3.5%" class="row-info">11</th>
-                  <th width="3.5%" class="row-info">12</th>
-                  <th width="3.5%" class="row-info">10</th>
-                  <th width="3.5%" class="row-info">11</th>
-                  <th width="3.5%" class="row-info">12</th>
-                  <th width="3.5%" class="row-info">10</th>
-                  <th width="3.5%" class="row-info">11</th>
-                  <th width="3.5%" class="row-info">12</th>
-                  <th width="3.5%" class="row-info">10</th>
+                  <th width="3.5%" class="row-purple">13</th>
+                  <th width="3.5%" class="row-purple">14</th>
+                  <th width="3.5%" class="row-purple">15</th>
+                  <th width="3.5%"  class="row-info">16</th>
+                  <th width="3.5%" class="row-info">17</th>
+                  <th width="3.5%" class="row-info">18</th>
+                  <th width="3.5%" class="row-info">19</th>
+                  <th width="3.5%" class="row-info">20</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td width="12.5%">Answer No.</td>
-                  <td width="3.5%">1</td>
-                  <td width="3.5%">2</td>
-                  <td width="3.5%">3</td>
-                  <td width="3.5%">4</td>
-                  <td width="3.5%">5</td>
-                  <td width="3.5%">6</td>
-                  <td width="3.5%">7</td>
-                  <td width="3.5%">8</td>
-                  <td width="3.5%">9</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
+                  <td width="12.5%">Correct answers</td>
+                  <td width="3.5%">{{ result.reading.answers.q1 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q2 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q3 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q4 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q5 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q6 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q7 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q8 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q9 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q10 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q11 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q12 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q13 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q14 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q15 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q16 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q17 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q18 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q19 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q20 }}</td>
                 </tr>
                 <tr>
-                  <td width="12.5%">Answer No.</td>
-                  <td width="3.5%">1</td>
-                  <td width="3.5%">2</td>
-                  <td width="3.5%">3</td>
-                  <td width="3.5%">4</td>
-                  <td width="3.5%">5</td>
-                  <td width="3.5%">6</td>
-                  <td width="3.5%">7</td>
-                  <td width="3.5%">8</td>
-                  <td width="3.5%">9</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
+                  <td width="12.5%">Your Answer</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">A</td>
+                  <td width="3.5%">H</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">C</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
                 </tr>
               </tbody>
             </table>
+            <table class="table table-question">
+              <thead>
+                <tr>
+                  <th width="12.5%" class="row-purple">Question No.</th>
+                  <th width="3.5%" class="row-purple">21</th>
+                  <th width="3.5%" class="row-purple">22</th>
+                  <th width="3.5%" class="row-purple">23</th>
+                  <th width="3.5%" class="row-purple">24</th>
+                  <th width="3.5%" class="row-purple">25</th>
+                  <th width="3.5%" class="row-purple">26</th>
+                  <th width="3.5%" class="row-purple">27</th>
+                  <th width="3.5%" class="row-purple">28</th>
+                  <th width="3.5%" class="row-purple">29</th>
+                  <th width="3.5%" class="row-purple">30</th>
+                  <th width="3.5%" class="row-purple">31</th>
+                  <th width="3.5%" class="row-purple">32</th>
+                  <th width="3.5%" class="row-purple">33</th>
+                  <th width="3.5%" class="row-purple">34</th>
+                  <th width="3.5%" class="row-purple">35</th>
+                  <th width="3.5%"  class="row-info">36</th>
+                  <th width="3.5%" class="row-info">37</th>
+                  <th width="3.5%" class="row-info">38</th>
+                  <th width="3.5%" class="row-info">39</th>
+                  <th width="3.5%" class="row-info">40</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td width="12.5%">Correct Answer </td>
+                  <td width="3.5%">{{ result.reading.answers.q21 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q22 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q23 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q24 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q25 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q26 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q27 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q28 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q29 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q30 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q31 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q32 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q33 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q34 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q35 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q36 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q37 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q38 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q39 }}</td>
+                  <td width="3.5%">{{ result.reading.answers.q40 }}</td>
+                </tr>
+                <tr>
+                  <td width="12.5%">Your Answer</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">B</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                </tr>
+              </tbody>
+            </table>
+             <p class="mt-50">SCIENCE</p>
             <table class="table table-question">
               <thead>
                 <tr>
@@ -818,168 +1015,62 @@
                   <th width="3.5%" class="row-purple">10</th>
                   <th width="3.5%" class="row-purple">11</th>
                   <th width="3.5%" class="row-purple">12</th>
-                  <th width="3.5%" class="row-purple">10</th>
-                  <th width="3.5%" class="row-purple">11</th>
-                  <th width="3.5%" class="row-purple">12</th>
-                  <th width="3.5%"  class="row-info">10</th>
-                  <th width="3.5%" class="row-info">11</th>
-                  <th width="3.5%" class="row-info">12</th>
-                  <th width="3.5%" class="row-info">10</th>
-                  <th width="3.5%" class="row-info">11</th>
-                  <th width="3.5%" class="row-info">12</th>
-                  <th width="3.5%" class="row-info">10</th>
-                  <th width="3.5%" class="row-info">11</th>
-                  <th width="3.5%" class="row-info">12</th>
-                  <th width="3.5%" class="row-info">10</th>
+                  <th width="3.5%" class="row-purple">13</th>
+                  <th width="3.5%" class="row-purple">14</th>
+                  <th width="3.5%" class="row-purple">15</th>
+                  <th width="3.5%"  class="row-info">16</th>
+                  <th width="3.5%" class="row-info">17</th>
+                  <th width="3.5%" class="row-info">18</th>
+                  <th width="3.5%" class="row-info">19</th>
+                  <th width="3.5%" class="row-info">20</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td width="12.5%">Answer No.</td>
-                  <td width="3.5%">1</td>
-                  <td width="3.5%">2</td>
-                  <td width="3.5%">3</td>
-                  <td width="3.5%">4</td>
-                  <td width="3.5%">5</td>
-                  <td width="3.5%">6</td>
-                  <td width="3.5%">7</td>
-                  <td width="3.5%">8</td>
-                  <td width="3.5%">9</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
+                  <td width="12.5%">Correct answer</td>
+                  <td width="3.5%">{{ result.science.answers.q1 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q2 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q3 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q4 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q5 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q6 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q7 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q8 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q9 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q10 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q11 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q12 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q13 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q14 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q15 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q16 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q17 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q18 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q19 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q20 }}</td>
                 </tr>
                 <tr>
-                  <td width="12.5%">Answer No.</td>
-                  <td width="3.5%">1</td>
-                  <td width="3.5%">2</td>
-                  <td width="3.5%">3</td>
-                  <td width="3.5%">4</td>
-                  <td width="3.5%">5</td>
-                  <td width="3.5%">6</td>
-                  <td width="3.5%">7</td>
-                  <td width="3.5%">8</td>
-                  <td width="3.5%">9</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                </tr>
-              </tbody>
-            </table>
-             <p class="mt-50">ENGLISH</p>
-            <table class="table table-question">
-              <thead>
-                <tr>
-                  <th width="12.5%" class="row-purple">Question No.</th>
-                  <th width="3.5%" class="row-purple">1</th>
-                  <th width="3.5%" class="row-purple">2</th>
-                  <th width="3.5%" class="row-purple">3</th>
-                  <th width="3.5%" class="row-purple">4</th>
-                  <th width="3.5%" class="row-purple">5</th>
-                  <th width="3.5%" class="row-purple">6</th>
-                  <th width="3.5%" class="row-purple">7</th>
-                  <th width="3.5%" class="row-purple">8</th>
-                  <th width="3.5%" class="row-purple">9</th>
-                  <th width="3.5%" class="row-purple">10</th>
-                  <th width="3.5%" class="row-purple">11</th>
-                  <th width="3.5%" class="row-purple">12</th>
-                  <th width="3.5%" class="row-purple">10</th>
-                  <th width="3.5%" class="row-purple">11</th>
-                  <th width="3.5%" class="row-purple">12</th>
-                  <th width="3.5%"  class="row-info">10</th>
-                  <th width="3.5%" class="row-info">11</th>
-                  <th width="3.5%" class="row-info">12</th>
-                  <th width="3.5%" class="row-info">10</th>
-                  <th width="3.5%" class="row-info">11</th>
-                  <th width="3.5%" class="row-info">12</th>
-                  <th width="3.5%" class="row-info">10</th>
-                  <th width="3.5%" class="row-info">11</th>
-                  <th width="3.5%" class="row-info">12</th>
-                  <th width="3.5%" class="row-info">10</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td width="12.5%">Answer No.</td>
-                  <td width="3.5%">1</td>
-                  <td width="3.5%">2</td>
-                  <td width="3.5%">3</td>
-                  <td width="3.5%">4</td>
-                  <td width="3.5%">5</td>
-                  <td width="3.5%">6</td>
-                  <td width="3.5%">7</td>
-                  <td width="3.5%">8</td>
-                  <td width="3.5%">9</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                </tr>
-                <tr>
-                  <td width="12.5%">Answer No.</td>
-                  <td width="3.5%">1</td>
-                  <td width="3.5%">2</td>
-                  <td width="3.5%">3</td>
-                  <td width="3.5%">4</td>
-                  <td width="3.5%">5</td>
-                  <td width="3.5%">6</td>
-                  <td width="3.5%">7</td>
-                  <td width="3.5%">8</td>
-                  <td width="3.5%">9</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
+                  <td width="12.5%">Your Answer </td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">C</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">F</td>
+                  <td width="3.5%">C</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
                 </tr>
               </tbody>
             </table>
@@ -987,182 +1078,78 @@
               <thead>
                 <tr>
                   <th width="12.5%" class="row-purple">Question No.</th>
-                  <th width="3.5%" class="row-purple">1</th>
-                  <th width="3.5%" class="row-purple">2</th>
-                  <th width="3.5%" class="row-purple">3</th>
-                  <th width="3.5%" class="row-purple">4</th>
-                  <th width="3.5%" class="row-purple">5</th>
-                  <th width="3.5%" class="row-purple">6</th>
-                  <th width="3.5%" class="row-purple">7</th>
-                  <th width="3.5%" class="row-purple">8</th>
-                  <th width="3.5%" class="row-purple">9</th>
-                  <th width="3.5%" class="row-purple">10</th>
-                  <th width="3.5%" class="row-purple">11</th>
-                  <th width="3.5%" class="row-purple">12</th>
-                  <th width="3.5%" class="row-purple">10</th>
-                  <th width="3.5%" class="row-purple">11</th>
-                  <th width="3.5%" class="row-purple">12</th>
-                  <th width="3.5%"  class="row-info">10</th>
-                  <th width="3.5%" class="row-info">11</th>
-                  <th width="3.5%" class="row-info">12</th>
-                  <th width="3.5%" class="row-info">10</th>
-                  <th width="3.5%" class="row-info">11</th>
-                  <th width="3.5%" class="row-info">12</th>
-                  <th width="3.5%" class="row-info">10</th>
-                  <th width="3.5%" class="row-info">11</th>
-                  <th width="3.5%" class="row-info">12</th>
-                  <th width="3.5%" class="row-info">10</th>
+                  <th width="3.5%" class="row-purple">21</th>
+                  <th width="3.5%" class="row-purple">22</th>
+                  <th width="3.5%" class="row-purple">23</th>
+                  <th width="3.5%" class="row-purple">24</th>
+                  <th width="3.5%" class="row-purple">25</th>
+                  <th width="3.5%" class="row-purple">26</th>
+                  <th width="3.5%" class="row-purple">27</th>
+                  <th width="3.5%" class="row-purple">28</th>
+                  <th width="3.5%" class="row-purple">29</th>
+                  <th width="3.5%" class="row-purple">30</th>
+                  <th width="3.5%" class="row-purple">31</th>
+                  <th width="3.5%" class="row-purple">32</th>
+                  <th width="3.5%" class="row-purple">33</th>
+                  <th width="3.5%" class="row-purple">34</th>
+                  <th width="3.5%" class="row-purple">35</th>
+                  <th width="3.5%"  class="row-info">36</th>
+                  <th width="3.5%" class="row-info">37</th>
+                  <th width="3.5%" class="row-info">38</th>
+                  <th width="3.5%" class="row-info">39</th>
+                  <th width="3.5%" class="row-info">40</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td width="12.5%">Answer No.</td>
-                  <td width="3.5%">1</td>
-                  <td width="3.5%">2</td>
-                  <td width="3.5%">3</td>
-                  <td width="3.5%">4</td>
-                  <td width="3.5%">5</td>
-                  <td width="3.5%">6</td>
-                  <td width="3.5%">7</td>
-                  <td width="3.5%">8</td>
-                  <td width="3.5%">9</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
+                  <td width="12.5%">Correct Answer</td>
+                  <td width="3.5%">{{ result.science.answers.q21 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q22 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q23 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q24 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q25 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q26 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q27 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q28 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q29 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q30 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q31 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q32 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q33 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q34 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q35 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q36 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q37 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q38 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q39 }}</td>
+                  <td width="3.5%">{{ result.science.answers.q40 }}</td>
                 </tr>
                 <tr>
-                  <td width="12.5%">Answer No.</td>
-                  <td width="3.5%">1</td>
-                  <td width="3.5%">2</td>
-                  <td width="3.5%">3</td>
-                  <td width="3.5%">4</td>
-                  <td width="3.5%">5</td>
-                  <td width="3.5%">6</td>
-                  <td width="3.5%">7</td>
-                  <td width="3.5%">8</td>
-                  <td width="3.5%">9</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
+                  <td width="12.5%">Your Answer</td>
+                  <td width="3.5%">A</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">F</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
+                  <td width="3.5%">+</td>
                 </tr>
               </tbody>
             </table>
-            <table class="table table-question">
-              <thead>
-                <tr>
-                  <th width="12.5%" class="row-purple">Question No.</th>
-                  <th width="3.5%" class="row-purple">1</th>
-                  <th width="3.5%" class="row-purple">2</th>
-                  <th width="3.5%" class="row-purple">3</th>
-                  <th width="3.5%" class="row-purple">4</th>
-                  <th width="3.5%" class="row-purple">5</th>
-                  <th width="3.5%" class="row-purple">6</th>
-                  <th width="3.5%" class="row-purple">7</th>
-                  <th width="3.5%" class="row-purple">8</th>
-                  <th width="3.5%" class="row-purple">9</th>
-                  <th width="3.5%" class="row-purple">10</th>
-                  <th width="3.5%" class="row-purple">11</th>
-                  <th width="3.5%" class="row-purple">12</th>
-                  <th width="3.5%" class="row-purple">10</th>
-                  <th width="3.5%" class="row-purple">11</th>
-                  <th width="3.5%" class="row-purple">12</th>
-                  <th width="3.5%"  class="row-info">10</th>
-                  <th width="3.5%" class="row-info">11</th>
-                  <th width="3.5%" class="row-info">12</th>
-                  <th width="3.5%" class="row-info">10</th>
-                  <th width="3.5%" class="row-info">11</th>
-                  <th width="3.5%" class="row-info">12</th>
-                  <th width="3.5%" class="row-info">10</th>
-                  <th width="3.5%" class="row-info">11</th>
-                  <th width="3.5%" class="row-info">12</th>
-                  <th width="3.5%" class="row-info">10</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td width="12.5%">Answer No.</td>
-                  <td width="3.5%">1</td>
-                  <td width="3.5%">2</td>
-                  <td width="3.5%">3</td>
-                  <td width="3.5%">4</td>
-                  <td width="3.5%">5</td>
-                  <td width="3.5%">6</td>
-                  <td width="3.5%">7</td>
-                  <td width="3.5%">8</td>
-                  <td width="3.5%">9</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                </tr>
-                <tr>
-                  <td width="12.5%">Answer No.</td>
-                  <td width="3.5%">1</td>
-                  <td width="3.5%">2</td>
-                  <td width="3.5%">3</td>
-                  <td width="3.5%">4</td>
-                  <td width="3.5%">5</td>
-                  <td width="3.5%">6</td>
-                  <td width="3.5%">7</td>
-                  <td width="3.5%">8</td>
-                  <td width="3.5%">9</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                  <td width="3.5%">11</td>
-                  <td width="3.5%">12</td>
-                  <td width="3.5%">10</td>
-                </tr>
-              </tbody>
-            </table>
+
           </div>
           <div class="col-xs-12 col-sm-4">
             <div class="comment-box">

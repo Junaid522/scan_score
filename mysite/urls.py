@@ -16,12 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import url
 from django.contrib.auth import views as auth_views
+from django.urls import include
+
 from scan_score import views as scan_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^login/', auth_views.login, name='login'),
-    url(r'^home/', scan_views.home, name='home'),
+    url(r'^$', scan_views.home, name='home'),
+    url(r'^login/$', scan_views.login_view, name='login'),
+    url(r'^fileupload/', scan_views.model_form_upload, name='fileupload'),
+    url(r'^index/', scan_views.index, name='index'),
     url(r'^logout/$', auth_views.logout, {'next_page': 'login'}, name='logout'),
 
 ]

@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Score Scan</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../static/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../static/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="stylesheet" href="../../static/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../static/css/style.css" />
     
   </head>
   <body>
@@ -22,7 +22,7 @@
             </div>
             <div class="col-xs-12 col-sm-6">
               <div class="header-title">
-                <span style="cursor:pointer" onclick="openNav()"><img src="../static/img/Menu.png" class="pull-right" alt="icon" /></span>
+                <span style="cursor:pointer" onclick="openNav()"><img src="../../static/img/Menu.png" class="pull-right" alt="icon" /></span>
                 <div id="myNav" class="nav-overlay">
                   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                   <div class="overlay-content">
@@ -41,16 +41,17 @@
         <div class="login-panel">
           <div class="table-method">
             <div class="main-logo">
-              <img src="../static/img/logo.png" alt="logo" />
+              <img src="../../static/img/logo.png" alt="logo" />
             </div>
-            <form>
+            <form method="post" action="{% url 'login' %}">
+                {% csrf_token %}
               <div class="form-group">
-                <img src="../static/img/email-icon.png" id="input_img">
-                <input type="text" class="custom-form" name="" placeholder="Email Address" />  
+                <img src="../../static/img/email-icon.png" id="input_img">
+                <input type="text" class="custom-form" name="email" placeholder="Email Address" />
               </div>
               <div class="form-group">
-                <img src="../static/img/pw-icon.png" id="input_img-2">
-                <input type="password" class="custom-form" name="" placeholder="Password" />  
+                <img src="../../static/img/pw-icon.png" id="input_img-2">
+                <input type="password" class="custom-form" name="password" placeholder="Password" />
               </div>
               <div class="checkbox-grup">
                 <label class="checkbox-container"> Keep me logged in. 
@@ -58,10 +59,11 @@
                   <span class="checkmark"></span>
                 </label>  
               </div>
-              <div class="buttons text-center">
-                <a href="#" class="btn btn-md btn-custom">Login</a>
-                <a href="#" class="terms-txt">Forget your password?</a>
-              </div>  
+                <button class="btn btn-md btn-custom" type="submit" value="login">Login</button>
+{#              <div class="buttons text-center">#}
+{#                <a type="submit" href="#" class="btn btn-md btn-custom">Login</a>#}
+{#                <a href="#" class="terms-txt">Forget your password?</a>#}
+{#              </div>#}
             </form>
           </div>
         </div>  
@@ -70,9 +72,9 @@
         <p> ⓒ Score-scan.com all rights reserved 2019</p>  
       </footer>
     </div>
-    <script src="../static/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="../../static/js/jquery-3.2.1.slim.min.js"></script>
     <script src="../../static/js/popper.min.js"></script>
-    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../../static/js/bootstrap.min.js"></script>
     <script type="text/javascript">
       function openNav() {
         document.getElementById("myNav").style.height = "100%";

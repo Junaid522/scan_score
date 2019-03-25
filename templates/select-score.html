@@ -1,0 +1,91 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Score Scan</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/font-awesome.min.css"  >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.7/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../static/css/style.css" />
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              <div class="back-button">
+
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <div class="header-title">
+                <span style="cursor:pointer" onclick="openNav()"><img src="../static/img/Menu.png" class="pull-right" alt="icon" /></span>
+                <div id="myNav" class="nav-overlay">
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                  <div class="overlay-content">
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Clients</a>
+                    <a href="#">Contact</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="login-section">
+        <div class="login-panel">
+          <div class="table-method">
+            <div class="title-test-sec text-center">
+              <h1>Scan Your Test</h1>
+              <p>Select new or last used test from the dropdown menu below.</p>
+            </div>
+            <div class="select-test-sec">
+              <div class="form-group">
+                  <select class="browser-default custom-select custom-select-lg mb-3">
+                    <option selected>Select Test Type</option>
+                    <option value="1">ACT</option>
+                    <option value="2">SAT</option>
+
+                  </select>
+
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="buttons text-center">
+              <a href="{% url 'fileupload' %}" class="btn btn-md btn-custom">Begin Scanning</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <p> ⓒ Score-scan.com all rights reserved 2019</p>
+      </footer>
+    </div>
+    <script src="../static/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.7/dist/js/bootstrap-select.min.js"></script>
+
+    <script
+  src="http://code.jquery.com/jquery-3.3.1.slim.js"
+  integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
+  crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      function openNav() {
+        document.getElementById("myNav").style.height = "100%";
+      }
+      function closeNav() {
+        document.getElementById("myNav").style.height = "0%";
+      }
+      $(function () {
+          $('select').selectpicker();
+      });
+    </script>
+  </body>
+</html>

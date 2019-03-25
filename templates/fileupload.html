@@ -17,7 +17,7 @@
           <div class="row">
             <div class="col-xs-12 col-sm-6">
               <div class="back-button">
-                <a href="#"> <i class="fa fa-angle-left"></i></a>
+                <a href="{% url 'select' %}"> <i class="fa fa-angle-left"></i></a>
               </div>  
             </div>
             <div class="col-xs-12 col-sm-6">
@@ -44,12 +44,14 @@
               <img src="../static/img/logo.png" alt="logo" />
             </div>
 {#            <div class="file-upload">#}
-              <button class="file-upload-btn" type="button" onclick="">Add Image</button>
+{#              <button class="file-upload-btn" type="button" onclick="">Add Image</button>#}
 
                  <form method="post" enctype="multipart/form-data">
                     {% csrf_token %}
-                    {{ form.as_p }}
-                    <button type="submit">Upload</button>
+                   <button class="file-upload-btn"> {{ form.as_p }}Add Image</button>
+                    <button style="margin-top: 12px" class="file-upload-btn" type="submit">Submit</button>
+
+
                 </form>
 
               </div>

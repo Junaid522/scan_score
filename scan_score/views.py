@@ -17,7 +17,7 @@ def login_view(request):
         email = request.POST['email']
         password = request.POST['password']
         print("Email: ", email, "Password: ", password)
-        return redirect('fileupload')
+        return redirect('select')
         # user = authenticate(email=email, password='password')
         # print(user)
         # if user:
@@ -31,16 +31,24 @@ def home(requests):
     return render(requests, 'welcome.html')
 
 @login_required
+def thanks(requests):
+    return render(requests, 'thank-you.html')
+
+@login_required
 def model_form_upload(request):
     if request.method == 'POST':
         form = DocumentForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('fileupload')
+            return redirect('thanks')
     else:
         form = DocumentForm()
     return render(request, 'fileupload.html', {'form': form})
 
+@login_required
+def select_test_type(request):
+
+ return render(request, 'select-score.html')
 
 @login_required
 def index(request):

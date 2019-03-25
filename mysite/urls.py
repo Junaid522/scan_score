@@ -24,7 +24,9 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', scan_views.home, name='home'),
     url(r'^login/$', scan_views.login_view, name='login'),
+    url(r'^select/$', scan_views.select_test_type, name='select'),
     url(r'^fileupload/', scan_views.model_form_upload, name='fileupload'),
+    url(r'^thanks/', scan_views.thanks, name='thanks'),
     url(r'^index/', scan_views.index, name='index'),
     url(r'^logout/$', auth_views.logout, {'next_page': 'login'}, name='logout'),
 

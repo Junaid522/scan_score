@@ -23,6 +23,7 @@ from scan_score import views as scan_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', scan_views.home, name='home'),
+    url(r'^signup$', scan_views.signup, name='signup'),
     url(r'^login/$', scan_views.login_view, name='login'),
     url(r'^select/$', scan_views.select_test_type, name='select'),
     url(r'^fileupload/', scan_views.model_form_upload, name='fileupload'),

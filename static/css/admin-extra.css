@@ -4,9 +4,18 @@
   }
 
 div.breadcrumbs {
-    background: #0868b6
-
-
-
- ;
+    background: #0868b6;
   }
+
+.app-auth module {
+     background: #0868b6;
+
+}
+
+/*.selector-chosen h2 {*/
+
+  /*}*/
+
+ /*.app-auth module{*/
+      /*background: green*/
+  /*}*/

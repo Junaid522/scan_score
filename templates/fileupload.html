@@ -40,19 +40,24 @@
       <div class="login-section">
         <div class="login-panel">
           <div class="table-method">
-            <div class="main-logo">
-              <img src="../static/img/logo.png" alt="logo" />
+            <div class="main-logo" id="app">
+              <img src="../static/img/logo.png" alt="logo"  />
             </div>
 {#            <div class="file-upload">#}
 {#              <button class="file-upload-btn" type="button" onclick="">Add Image</button>#}
 
-                 <form method="post" enctype="multipart/form-data">
+                 <form method="post" enctype="multipart/form-data" name="Form" >
                     {% csrf_token %}
                    <button class="file-upload-btn"> {{ form.as_p }}Add Image</button>
-                    <button style="margin-top: 12px" class="file-upload-btn" type="submit">Submit</button>
+
+
+                    <button onclick="show_image('../static/img/ajax-loader.gif');" style="margin-top: 12px" class="file-upload-btn" type="submit">Submit</button>
 
 
                 </form>
+
+
+
 
               </div>
             </div>
@@ -67,11 +72,43 @@
     <script src="../../static/js/popper.min.js"></script>
     <script src="../static/js/bootstrap.min.js"></script>
     <script type="text/javascript">
+
+       function show_image(src) {
+
+
+    var img = document.createElement("img");
+    img.src = src;
+
+    // This next line will just add it to the <body> tag
+    {#document.body.appendChild(img);#}
+           document.getElementById("app").appendChild(img);
+}
+
+
+
+
+      function upload () {
+          {#sleep(400000)#}
+          {#document.write("talha")#}
+          {# alert("Wait for 5 seconds.");#}
+        {#sleep(5000)#}
+
+
+        console.log("talha")
+
+          setTimeout(function() {
+                console.log("algo")
+        }, (3 * 1000));
+
+
+      }
+
       function openNav() {
         document.getElementById("myNav").style.height = "100%";
       }
       function closeNav() {
         document.getElementById("myNav").style.height = "0%";
+        document.write("closed")
       }
       function readURL(input) {
         if (input.files && input.files[0]) {

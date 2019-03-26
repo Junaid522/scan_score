@@ -1,3 +1,5 @@
+import time
+
 from django.contrib import auth
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
@@ -5,11 +7,23 @@ from django.shortcuts import render, redirect
 import json
 
 # Create your views here.
-from scan_score.forms import DocumentForm
+from .forms import DocumentForm,SignUpForm
 # from scan_score.models import UploadImage
 
 
-
+def signup(request):
+  if request.method == 'POST':
+    form = SignUpForm(request.POST)
+    if form.is_valid():
+      form.save()
+      username = form.cleaned_data.get('username')
+      raw_password = form.cleaned_data.get('password1')
+      user = authenticate(username=username, password=raw_password)
+      login(request, user)
+      return redirect('select')
+  else:
+    form = SignUpForm()
+  return render(request, 'signup.html', {'form': form})
 
 
 def login_view(request):
@@ -26,7 +40,7 @@ def login_view(request):
         #     return redirect('fileupload')
     return render(request, 'registration/login.html')
 
-@login_required
+# @login_required
 def home(requests):
     return render(requests, 'welcome.html')
 
@@ -40,6 +54,7 @@ def model_form_upload(request):
         form = DocumentForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
+            time.sleep(7)
             return redirect('thanks')
     else:
         form = DocumentForm()
